@@ -18,9 +18,15 @@ namespace KaloriApp.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Calories(CaloriesViewModel calories)
         {
-            return View();
+            //CaloriesViewModel calories = new CaloriesViewModel();
+            //calories.Gram = 100;
+            //calories.Food = "Socker";
+            calories.Calorie = 400;
+
+            return View(calories);
+
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

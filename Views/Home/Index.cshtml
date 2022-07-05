@@ -1,4 +1,6 @@
-﻿@{
+﻿@model CaloriesViewModel
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
@@ -6,15 +8,15 @@
     <h1 class="display-4">Welcome</h1>
 </div>
 
-<form>
+<form asp-controller="Home" asp-action="Calories" method="post">
   <div id="emailHelp" class="form-text">Beräkna kalori innehåll:</div>
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Matvara</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <input asp-for=Food type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
   </div>
   <div class="mb-3">
     <label for="exampleInputPassword1" class="form-label">Vikt</label>
-    <input type="password" class="form-control" id="exampleInputPassword1">
+    <input asp-for=Gram type="password" class="form-control" id="exampleInputPassword1">
   </div>
   <button type="submit" class="btn btn-primary">Beräkna</button>
 </form>
