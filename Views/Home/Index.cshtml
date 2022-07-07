@@ -1,22 +1,17 @@
 ﻿@model CaloriesViewModel
 
-@{
-    ViewData["Title"] = "Home Page";
-}
-
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
+    <h1 class="display-4">Beräkna kalori innehåll</h1>
 </div>
 
 <form asp-controller="Home" asp-action="Calories" method="post">
-  <div id="emailHelp" class="form-text">Beräkna kalori innehåll:</div>
   <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Matvara</label>
-    <input asp-for=Food type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <label for="inputFood" class="form-label">Matvara:</label>
+    <input asp-for=Food type="text" class="form-control" id="inputFood">
   </div>
   <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label">Vikt</label>
-    <input asp-for=Gram type="password" class="form-control" id="exampleInputPassword1">
+    <label for="inputGram" class="form-label">Vikt:</label>
+    <input asp-for=Gram type="text" class="form-control" id="inputGram">
   </div>
   <button type="submit" class="btn btn-primary">Beräkna</button>
 </form>
